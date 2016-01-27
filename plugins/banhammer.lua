@@ -279,7 +279,7 @@ local function run(msg, matches)
           return false 
         end
         unbanall_user(user_id)
-        return 'User ['..user_id..' ] Globally unabanned'
+        return 'User ['..user_id..' ] removed from global ban list'
       else
         local member = string.gsub(matches[2], '@', '')
         local get_cmd = 'unbanall'
@@ -294,21 +294,21 @@ end
 
 return {
   patterns = {
-    "^[!/]([Bb]anall) (.*)$",
-    "^[!/]([Bb]anall)$",
-    "^[!/]([Bb]anlist) (.*)$",
-    "^[!/]([Bb]anlist)$",
-    "^[!/]([Gg]banlist)$",
-    "^[!/]([Bb]an) (.*)$",
-    "^[!/]([Kk]ick)$",
-    "^[!/]([Uu]nban) (.*)$",
-    "^[!/]([Uu]nbanall) (.*)$",
-    "^[!/]([Uu]nbanall)$",
-    "^[!/]([Kk]ick) (.*)$",
-    "^[!/]([Kk]ickme)$",
-    "^[!/]([Bb]an)$",
-    "^[!/]([Uu]nban)$",
-    "^[!/]([Ii]d)$",
+    "^[!/$&#@]([Bb]anall) (.*)$",
+    "^[!/$&#@]([Bb]anall)$",
+    "^[!/$&#@]([Bb]anlist) (.*)$",
+    "^[!/$&#@]([Bb]anlist)$",
+    "^[!/$&#@]([Gg]banlist)$",
+    "^[!/$&#@]([Bb]an) (.*)$",
+    "^[!/$&#@]([Kk]ick)$",
+    "^[!/$&#@]([Uu]nban) (.*)$",
+    "^[!/$&#@]([Uu]nbanall) (.*)$",
+    "^[!/$&#@]([Uu]nbanall)$",
+    "^[!/$&#@]([Kk]ick) (.*)$",
+    "^[!/$&#@]([Kk]ickme)$",
+    "^[!/$&#@]([Bb]an)$",
+    "^[!/$&#@]([Uu]nban)$",
+    "^[!/$&#@]([Ii]d)$",
     "^!!tgservice (.+)$",
   },
   run = run,
